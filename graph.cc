@@ -5,7 +5,6 @@
 
 using namespace std;
 
-
   /*
    *
    * 	ContractionCost implementation
@@ -64,7 +63,7 @@ using namespace std;
   }
 
 
-  uint ContractionCost::nDil = 0;
+  unsigned int ContractionCost::nDil = 0;
 
 
   /*
@@ -76,6 +75,14 @@ using namespace std;
   Graph::Graph(const std::map<iTup, std::set<iTup>>& contrList) {
     encode(contrList);
   }
+
+  Graph::Graph(const std::vector<std::pair<iTup, std::set<iTup>>>& contrListPython) {
+    std::map<iTup, std::set<iTup>> contrList(contrListPython.begin(), contrListPython.end());
+
+    encode(contrList);
+  }
+
+
 
   map<iTup, std::set<iTup>> Graph::getContractionList() const {
     map<iTup, std::set<iTup>> ret;
@@ -116,7 +123,7 @@ using namespace std;
 
 
     // indMap[oldIndex] = newIndex
-  void Graph::relabelTensors(const std::vector<uint>& indMap) {
+  void Graph::relabelTensors(const std::vector<unsigned int>& indMap) {
 #ifdef SAFETY_FLAG
     if (indMap.size() != getTensorIDSet().size()) {
       throw(std::invalid_argument("Index mapping does not match tensors"));
@@ -124,7 +131,7 @@ using namespace std;
 #endif
 
     for (auto& mIt : icode) {
-      uint newC = mIt & 0xffffff00u;
+      unsigned int newC = mIt & 0xffffff00u;
       newC |= indMap[(mIt >> 4) & 0xf] << 4;
       newC |= indMap[mIt & 0xf];
       mIt = canonicalize(newC);
@@ -194,7 +201,7 @@ using namespace std;
 
   unsigned int Graph::isSubexpression(
 		  const unsigned int aStep,
-		  const std::pair<uint, uint>& tensPair) const {
+		  const std::pair<unsigned int, unsigned int>& tensPair) const {
     unsigned int theStep = (aStep & 0xffffff00u);
     theStep |= (tensPair.first & 0xf) << 4;
     theStep |= tensPair.second & 0xf;
@@ -209,7 +216,7 @@ using namespace std;
 
   std::pair<unsigned int, std::vector<unsigned int>> Graph::singleTermOpt() const {
     unsigned int bestReduction = 0, bestCost = 0;
-    std::vector<uint> retList;
+    std::vector<unsigned int> retList;
 
     for (auto mIt : icode) {
       size_t tensId1 = (mIt >> 4) & 0xfu, tensId2 = mIt & 0xfu;
@@ -294,7 +301,7 @@ using namespace std;
   }
 
 
-  bool Graph::replaceSubexpression(uint replStep) {
+  bool Graph::replaceSubexpression(unsigned int replStep) {
       // try the cache
     auto cIt = replCache.find(std::make_pair(*this, replStep));
 
@@ -313,23 +320,23 @@ using namespace std;
     return subcDone;
   }
 
-  void Graph::doReplacement(uint replStep) const {
+  void Graph::doReplacement(unsigned int replStep) const {
     iTup tensPair((replStep >> 4) & 0xfu, replStep & 0xfu);
 
       // function returning the new position of a tensor in tensIdList
       // given the old position: the contracted tensors are removed, and
       // the newly added result is appended at the end
-    auto getNewTensID = [this,&tensPair] (uint tId) {
+    auto getNewTensID = [this,&tensPair] (unsigned int tId) {
       if (tId == tensPair.first || tId == tensPair.second)
 	return (unsigned int)getAllNumInds().size()-2;
-      uint retId = tId;
+      unsigned int retId = tId;
       if (tId > tensPair.first) retId--;
       if (tId > tensPair.second) retId--;
       return retId;
     };
 
     auto contrSet = decodeElement(replStep);
-    std::set<uint> idx_remove1, idx_remove2;
+    std::set<unsigned int> idx_remove1, idx_remove2;
     unsigned int nInds1 = getNumInds(tensPair.first);
 
     for (auto cIt : contrSet) {
@@ -342,22 +349,22 @@ using namespace std;
       // tensor1 not removed by the contraction, then all such indices of
       // tensor2. If tId is not involved in the current contraction, its index
       // positions are unchanged
-    auto getNewIndexPos = [&] (uint tId, uint iInd) {
+    auto getNewIndexPos = [&] (unsigned int tId, unsigned int iInd) {
       if (tId == tensPair.first)
 	return iInd - (unsigned int)std::count_if(idx_remove1.begin(),
 	    			    idx_remove1.end(),
-				    [&](uint el) { return el < iInd; });
+				    [&](unsigned int el) { return el < iInd; });
       else if (tId == tensPair.second)
 	return iInd - (unsigned int)std::count_if(idx_remove2.begin(),
 	    			    idx_remove2.end(),
-				    [&](uint el) { return el < iInd; }) + nInds1 - (unsigned int)idx_remove1.size();
+				    [&](unsigned int el) { return el < iInd; }) + nInds1 - (unsigned int)idx_remove1.size();
       else
 	return iInd;
     };
 
      // TODO: I believe this will always yield true, because it only gets called
      // on indices that were not involved in the contraction
-    auto isAliveIndex = [&] (uint tId, uint iInd) {
+    auto isAliveIndex = [&] (unsigned int tId, unsigned int iInd) {
       if (tId == tensPair.first) return (idx_remove1.find(iInd) == idx_remove1.end());
       else if (tId == tensPair.second) return (idx_remove2.find(iInd) == idx_remove2.end());
       else return true;
@@ -379,7 +386,7 @@ using namespace std;
 	// 	if mIt is between two tensors not involved in the proposed
 	// 		contraction, rewrite only the tensor ids
 	// 	else we need to rewrite the contraction indices as well
-      uint nUntouchedTensors = 2;
+      unsigned int nUntouchedTensors = 2;
       if (cTensPair.first == tensPair.first || cTensPair.first == tensPair.second)
 	nUntouchedTensors--;
       if (cTensPair.second == tensPair.first || cTensPair.second == tensPair.second)
@@ -387,7 +394,7 @@ using namespace std;
 
       if (nUntouchedTensors == 0) continue;
 
-      uint newtId1 = getNewTensID(cTensPair.first),
+      unsigned int newtId1 = getNewTensID(cTensPair.first),
 	   newtId2 = getNewTensID(cTensPair.second);
 
       if (nUntouchedTensors == 2) {
@@ -406,7 +413,9 @@ using namespace std;
 	  newGraphFac.addContraction(newtId1, newtId2,
 	      			     getNewIndexPos(cTensPair.first, cIt.first),
 	      			     getNewIndexPos(cTensPair.second, cIt.second));
-	else std::cout << "unexpected not-alive index" << std::endl;
+	else {
+    //std::cout << "unexpected not-alive index" << std::endl;
+  }
       }
     }
 
@@ -416,7 +425,7 @@ using namespace std;
   }
 
 
-  void Graph::getProfit(const uint replStep, ContractionCost& result) const {
+  void Graph::getProfit(const unsigned int replStep, ContractionCost& result) const {
       // try the cache
     auto cIt = replCache.find(std::make_pair(*this, replStep));
 
@@ -447,8 +456,8 @@ using namespace std;
     Graph tmpGraph(*this);
 
     while (tmpGraph.icode.size() > 0) {
-      std::vector<uint> stepList;
-      uint cost;
+      std::vector<unsigned int> stepList;
+      unsigned int cost;
 
       std::tie(cost, stepList) = tmpGraph.singleTermOpt();
 
@@ -462,12 +471,12 @@ using namespace std;
 
     // replacement cache
   std::map<std::pair<Graph, unsigned int>, std::pair<Graph, bool>> Graph::replCache = std::map<std::pair<Graph, unsigned int>, std::pair<Graph, bool>>();
-  uint Graph::replCacheHit = 0;
-  uint Graph::replCacheMiss = 0;
+  unsigned int Graph::replCacheHit = 0;
+  unsigned int Graph::replCacheMiss = 0;
 
     // cost cache
   std::map<Graph, ContractionCost> Graph::costCache = std::map<Graph, ContractionCost>();
-  uint Graph::costCacheHit = 0;
-  uint Graph::costCacheMiss = 0;
+  unsigned int Graph::costCacheHit = 0;
+  unsigned int Graph::costCacheMiss = 0;
 
 // ***************************************************************

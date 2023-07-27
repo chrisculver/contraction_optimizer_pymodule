@@ -5,8 +5,7 @@
 #include <set>
 #include <vector>
 
-
-typedef std::pair<uint, uint> iTup;
+typedef std::pair<unsigned int, unsigned int> iTup;
 typedef std::map<iTup, std::set<iTup>> contrType;
 
 class ContractionCost {
@@ -25,7 +24,7 @@ class ContractionCost {
 
     std::vector<unsigned int> getCostArray() const { return store; }
 
-    static void setDilutionRange(uint _nDil) { nDil = _nDil; }
+    static void setDilutionRange(unsigned int _nDil) { nDil = _nDil; }
     static unsigned int getDilutionRange() { return nDil; }
 
   private:
@@ -40,6 +39,7 @@ class Graph
     std::vector<unsigned int> icode;
 
   public:
+    Graph(const std::vector<std::pair<iTup, std::set<iTup>>>& contrListPython);
     Graph(const std::map<iTup, std::set<iTup>>& contrList);
     Graph(const std::vector<unsigned int>& _icode) : icode(_icode) {}
 
@@ -48,7 +48,7 @@ class Graph
     bool operator<(const Graph& rhs) const { return icode < rhs.icode; }
 
     unsigned int isSubexpression(const unsigned int aStep,
-				 const std::pair<uint, uint>& tensPair) const;
+				 const std::pair<unsigned int, unsigned int>& tensPair) const;
     std::pair<unsigned int, std::vector<unsigned int>> singleTermOpt() const;
 
     std::map<iTup, std::set<iTup>> getContractionList() const;
@@ -59,12 +59,12 @@ class Graph
 #endif
 
     ContractionCost getRemainingCost() const;
-    void getProfit(const uint replStep, ContractionCost& result) const;
+    void getProfit(const unsigned int replStep, ContractionCost& result) const;
 
-    bool replaceSubexpression(uint graphStep);
-    void doReplacement(uint replStep) const;
+    bool replaceSubexpression(unsigned int graphStep);
+    void doReplacement(unsigned int replStep) const;
       // given a mapping oldTensId -> newTensId, relabel tensor IDs
-    void relabelTensors(const std::vector<uint>& indMap);
+    void relabelTensors(const std::vector<unsigned int>& indMap);
 
     static std::set<iTup> decodeElement(unsigned int aC);
 
@@ -76,9 +76,9 @@ class Graph
 
       // cache infrastructure
     static std::map<std::pair<Graph, unsigned int>, std::pair<Graph, bool>> replCache;
-    static uint replCacheHit, replCacheMiss;
+    static unsigned int replCacheHit, replCacheMiss;
     static std::map<Graph, ContractionCost> costCache;
-    static uint costCacheHit, costCacheMiss;
+    static unsigned int costCacheHit, costCacheMiss;
 };
 
 
@@ -99,8 +99,8 @@ class GraphFactory {
       mIt->second.insert(newC);
     }
 
-    void addContraction(const uint had1, const uint had2,
-		    	const uint q1, const uint q2) {
+    void addContraction(const unsigned int had1, const unsigned int had2,
+		    	const unsigned int q1, const unsigned int q2) {
       if (had1 > had2)
 	addContraction(std::make_pair(had2, had1), std::make_pair(q2, q1));
       else if (had1 < had2)
@@ -123,7 +123,7 @@ class GraphFactory {
      // remove internal loops from graph and relabel remaining indices
      // accordingly.
     void removeInternalLoops() {
-      std::set<uint> unique_tensors;
+      std::set<unsigned int> unique_tensors;
 
       for (auto aPair : contrList) {
 	unique_tensors.insert(aPair.first.first);
@@ -135,7 +135,7 @@ class GraphFactory {
 	  // if there is an internal loop on this index
 	if (intLoopIt != contrList.end()) {
 	    // collect indices to remove
-	  std::set<uint> idx_remove;
+	  std::set<unsigned int> idx_remove;
 	  for (auto cPair : intLoopIt->second) {
 	    idx_remove.insert(cPair.first);
 	    idx_remove.insert(cPair.second);

@@ -21,13 +21,13 @@
 int main() {
   ContractionCost::setDilutionRange(64);
 
-  auto graph1 = Graph({
+  auto graph1 = Graph(std::map<iTup, std::set<iTup>>{
                 {{0,2}, {{0,0}, {1,1}}},
                 {{1,3}, {{1,1}, {2,2}}},
                 {{1,2}, {{0,2}}},
                 {{0,3}, {{2,0}}},
         });
-  auto graph2 = Graph({
+  auto graph2 = Graph(std::map<iTup, std::set<iTup>>{
 		  {{0,2}, {{0,0}, {1,1}}},
 		  {{1,3}, {{1,2}, {2,1}}},
 		  {{1,2}, {{0,2}}},

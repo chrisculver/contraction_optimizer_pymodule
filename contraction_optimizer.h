@@ -4,8 +4,7 @@
 #include "diagram.h"
 #include <list>
 
-
-typedef std::tuple<uint, iTup, uint>  compStep_t;
+typedef std::tuple<unsigned int, iTup, unsigned int>  compStep_t;
 
 class ContractionOptimizer {
 
@@ -17,6 +16,7 @@ class ContractionOptimizer {
   public:
     ContractionOptimizer(const std::vector<Diagram>& _diagList);
 
+    void test();
     void tune();
 
     std::list<compStep_t> getCompStepList() const {return compStepList; }
@@ -25,10 +25,19 @@ class ContractionOptimizer {
     ContractionCost getNoCSECost() const { return noCSECost; }
 
   private:
-    ContractionCost get_global_profit(const uint graphStep,
+    ContractionCost get_global_profit(const unsigned int graphStep,
 					  const iTup& globTensPair);
 
 };
+
+/*
+namespace py = pybind11;
+
+PYBIND11_MODULE(ContractionOptimizer, m) {
+  py::class_<ContractionOptimizer>(m, "ContractionOptimizer")
+    .def(py::init)
+}
+*/
 
 
 

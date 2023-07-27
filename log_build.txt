@@ -1,0 +1,510 @@
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::string_caster<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, false>::load(pybind11::handle, bool)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:399: undefined reference to `PyUnicode_AsUTF8AndSize'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::type_caster<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, void>& pybind11::detail::load_type<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, void>(pybind11::detail::type_caster<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, void>&, pybind11::handle const&) [clone .isra.0]':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:247: undefined reference to `PyByteArray_Type'
+/usr/bin/ld: contraction_optimizer.o: in function `_PyObject_TypeCheck':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:247: undefined reference to `PyType_IsSubtype'
+/usr/bin/ld: contraction_optimizer.o: in function `bool pybind11::detail::string_caster<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, false>::load_raw<char>(std::enable_if<std::is_same<char, char>::value, pybind11::handle>::type)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:487: undefined reference to `PyByteArray_AsString'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:491: undefined reference to `PyByteArray_Size'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:477: undefined reference to `PyBytes_AsString'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:481: undefined reference to `PyBytes_Size'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::string_caster<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, false>::load(pybind11::handle, bool)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:401: undefined reference to `PyErr_Clear'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::all_type_info_populate(_typeobject*, std::vector<pybind11::detail::type_info*, std::allocator<pybind11::detail::type_info*> >&) [clone .isra.0]':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::dict::dict()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2068: undefined reference to `PyDict_New'
+/usr/bin/ld: contraction_optimizer.o: in function `ContractionOptimizer::test()':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::dict::dict()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2068: undefined reference to `PyDict_New'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2068: undefined reference to `PyDict_New'
+/usr/bin/ld: contraction_optimizer.o: in function `ContractionOptimizer::tune()':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::handle::dec_ref() const & [clone .isra.0]':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11_static_get':
+/home/chris/Code/LQCD/contraction_optimizer/contraction_optimizer.cc:49: undefined reference to `PyProperty_Type'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11_static_set':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:55: undefined reference to `PyProperty_Type'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cast_error::set_error() const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/common.h:1008: undefined reference to `PyExc_RuntimeError'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/common.h:1008: undefined reference to `PyErr_SetString'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11_meta_getattro':
+/home/chris/Code/LQCD/contraction_optimizer/contraction_optimizer.cc:175: undefined reference to `_PyType_Lookup'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11_meta_getattro':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:176: undefined reference to `PyInstanceMethod_Type'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:180: undefined reference to `PyType_Type'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::initialize_generic(std::unique_ptr<pybind11::detail::function_record, pybind11::cpp_function::InitializingFunctionRecordDeleter>&&, char const*, std::type_info const* const*, unsigned long)::{lambda(void*)#1}::_FUN(void*)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11_object_init':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:378: undefined reference to `PyExc_TypeError'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:378: undefined reference to `PyErr_SetString'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::error_fetch_and_normalize::~error_fetch_and_normalize()':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::raise_from(_object*, char const*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:787: undefined reference to `PyErr_Fetch'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:788: undefined reference to `PyErr_NormalizeException'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:790: undefined reference to `PyException_SetTraceback'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:796: undefined reference to `PyErr_SetString'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:798: undefined reference to `PyErr_Fetch'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:799: undefined reference to `PyErr_NormalizeException'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:801: undefined reference to `PyException_SetCause'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:802: undefined reference to `PyException_SetContext'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:803: undefined reference to `PyErr_Restore'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::raise_from(_object*, char const*)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::raise_err(_object*, char const*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:351: undefined reference to `PyErr_Occurred'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:355: undefined reference to `PyErr_SetString'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::instance::deallocate_layout()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/type_caster_base.h:461: undefined reference to `PyMem_Free'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::destruct(pybind11::detail::function_record*, bool)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::function_call::~function_call()':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `std::vector<pybind11::detail::function_call, std::allocator<pybind11::detail::function_call> >::~vector()':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::error_fetch_and_normalize::format_value_and_trace[abi:cxx11]() const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:561: undefined reference to `PyObject_Str'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:571: undefined reference to `PyUnicode_AsEncodedString'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:578: undefined reference to `PyBytes_AsStringAndSize'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:642: undefined reference to `PyFrame_GetCode'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:647: undefined reference to `PyFrame_GetLineNumber'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:657: undefined reference to `PyFrame_GetBack'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::error_fetch_and_normalize::format_value_and_trace[abi:cxx11]() const':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::error_fetch_and_normalize::restore()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:694: undefined reference to `PyErr_Restore'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::translate_exception(std::__exception_ptr::exception_ptr)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:413: undefined reference to `PyExc_RuntimeError'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:406: undefined reference to `PyExc_RuntimeError'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:402: undefined reference to `PyExc_OverflowError'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:398: undefined reference to `PyExc_ValueError'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:394: undefined reference to `PyExc_IndexError'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:390: undefined reference to `PyExc_ValueError'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:386: undefined reference to `PyExc_ValueError'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:382: undefined reference to `PyExc_ValueError'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:378: undefined reference to `PyExc_MemoryError'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:410: undefined reference to `PyExc_RuntimeError'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::error_fetch_and_normalize::error_fetch_and_normalize(char const*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:498: undefined reference to `PyErr_Fetch'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:521: undefined reference to `PyErr_NormalizeException'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::error_string[abi:cxx11]()':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::get_internals()::gil_scoped_acquire_local::gil_scoped_acquire_local()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:480: undefined reference to `PyGILState_Ensure'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::error_scope::error_scope()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/common.h:1078: undefined reference to `PyErr_Fetch'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::get_python_state_dict()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:437: undefined reference to `PyEval_GetBuiltins'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::get_internals_pp_from_capsule(pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:459: undefined reference to `PyCapsule_GetPointer'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::error_scope::~error_scope()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/common.h:1081: undefined reference to `PyErr_Restore'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::get_internals()::gil_scoped_acquire_local::~gil_scoped_acquire_local()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:483: undefined reference to `PyGILState_Release'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::dict::raw_dict(_object*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2100: undefined reference to `PyDict_Type'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2100: undefined reference to `PyObject_CallFunctionObjArgs'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::get_python_state_dict()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:449: undefined reference to `PyExc_SystemError'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::get_internals()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:513: undefined reference to `PyThreadState_Get'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:515: undefined reference to `PyThread_tss_alloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:515: undefined reference to `PyThread_tss_create'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:518: undefined reference to `PyThread_tss_set'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::capsule::capsule(void const*, char const*, void (*)(_object*))':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1919: undefined reference to `PyCapsule_New'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::accessor_policies::generic_item::set(pybind11::handle, pybind11::handle, pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1071: undefined reference to `PyObject_SetItem'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::make_static_property_type()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:66: undefined reference to `PyUnicode_FromString'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:72: undefined reference to `PyType_Type'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::get_internals()':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:472: undefined reference to `PyProperty_Type'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::make_static_property_type()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:89: undefined reference to `PyType_Ready'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::setattr(pybind11::handle, char const*, pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:912: undefined reference to `PyObject_SetAttrString'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::make_default_metaclass()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:253: undefined reference to `PyUnicode_FromString'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:259: undefined reference to `PyType_Type'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::get_internals()':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:472: undefined reference to `PyType_Type'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::make_default_metaclass()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:281: undefined reference to `PyType_Ready'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::setattr(pybind11::handle, char const*, pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:912: undefined reference to `PyObject_SetAttrString'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::make_object_base_type(_typeobject*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:483: undefined reference to `PyUnicode_FromString'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::get_internals()':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:472: undefined reference to `PyBaseObject_Type'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::make_object_base_type(_typeobject*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:512: undefined reference to `PyType_Ready'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::setattr(pybind11::handle, char const*, pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:912: undefined reference to `PyObject_SetAttrString'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::get_internals_pp_from_capsule(pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:461: undefined reference to `PyExc_SystemError'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::error_scope::~error_scope()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/common.h:1081: undefined reference to `PyErr_Restore'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::get_internals()::gil_scoped_acquire_local::~gil_scoped_acquire_local()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:483: undefined reference to `PyGILState_Release'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::gil_scoped_acquire::gil_scoped_acquire()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/gil.h:57: undefined reference to `PyThread_tss_get'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::get_thread_state_unchecked()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/type_caster_base.h:490: undefined reference to `_PyThreadState_UncheckedGet'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::gil_scoped_acquire::gil_scoped_acquire()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/gil.h:82: undefined reference to `PyEval_AcquireThread'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/gil.h:65: undefined reference to `PyGILState_GetThisThreadState'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/gil.h:69: undefined reference to `PyThreadState_New'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/gil.h:76: undefined reference to `PyThread_tss_set'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11_meta_setattro':
+/home/chris/Code/LQCD/contraction_optimizer/contraction_optimizer.cc:140: undefined reference to `_PyType_Lookup'
+/usr/bin/ld: /home/chris/Code/LQCD/contraction_optimizer/contraction_optimizer.cc:164: undefined reference to `PyType_Type'
+/usr/bin/ld: /home/chris/Code/LQCD/contraction_optimizer/contraction_optimizer.cc:148: undefined reference to `PyObject_IsInstance'
+/usr/bin/ld: /home/chris/Code/LQCD/contraction_optimizer/contraction_optimizer.cc:149: undefined reference to `PyObject_IsInstance'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::gil_scoped_acquire::dec_ref()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/gil.h:109: undefined reference to `PyThreadState_Clear'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/gil.h:113: undefined reference to `PyThread_tss_set'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/gil.h:111: undefined reference to `PyThreadState_DeleteCurrent'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::gil_scoped_acquire::~gil_scoped_acquire()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/gil.h:128: undefined reference to `PyEval_SaveThread'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::error_scope::error_scope()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/common.h:1078: undefined reference to `PyErr_Fetch'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::error_scope::~error_scope()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/common.h:1081: undefined reference to `PyErr_Restore'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::error_already_set::m_fetched_error_deleter(pybind11::detail::error_fetch_and_normalize*)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::str::raw_str(_object*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1605: undefined reference to `PyObject_Str'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::dict_getitemstring(_object*, char const*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:945: undefined reference to `PyUnicode_FromString'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:950: undefined reference to `PyDict_GetItemWithError'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::dict_getitemstring(_object*, char const*)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::dict_getitemstring(_object*, char const*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:952: undefined reference to `PyErr_Occurred'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::str::str(char const*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1542: undefined reference to `PyUnicode_FromString'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1544: undefined reference to `PyErr_Occurred'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::getattr(pybind11::handle, char const*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:882: undefined reference to `PyObject_GetAttrString'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::accessor<pybind11::detail::accessor_policies::str_attr>::get_cache() const':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::str::operator std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >() const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1584: undefined reference to `PyUnicode_AsUTF8String'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1591: undefined reference to `PyBytes_AsStringAndSize'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::str::operator std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >() const':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::string_caster<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, false>::decode_utfN(char const*, long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:455: undefined reference to `PyUnicode_DecodeUTF8'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::type_caster<char, void>::cast(char const*, pybind11::return_value_policy, pybind11::handle) [clone .isra.0]':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:472: undefined reference to `_Py_NoneStruct'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::error_scope::error_scope()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/common.h:1078: undefined reference to `PyErr_Fetch'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::capsule::initialize_with_void_ptr_destructor(void const*, char const*, void (*)(void*))::{lambda(_object*)#1}::operator()(_object*) const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2014: undefined reference to `PyCapsule_GetContext'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::error_scope::error_scope()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/common.h:1078: undefined reference to `PyErr_Fetch'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::capsule::get_name_in_error_scope(_object*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1999: undefined reference to `PyCapsule_GetName'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::error_scope::~error_scope()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/common.h:1081: undefined reference to `PyErr_Restore'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::capsule::initialize_with_void_ptr_destructor(void const*, char const*, void (*)(void*))::{lambda(_object*)#1}::operator()(_object*) const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2019: undefined reference to `PyCapsule_GetPointer'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::error_scope::~error_scope()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/common.h:1081: undefined reference to `PyErr_Restore'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::capsule::initialize_with_void_ptr_destructor(void const*, char const*, void (*)(void*))::{lambda(_object*)#1}::operator()(_object*) const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2015: undefined reference to `PyErr_Occurred'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::capsule::get_name_in_error_scope(_object*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2000: undefined reference to `PyErr_Occurred'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2002: undefined reference to `PyErr_WriteUnraisable'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::error_scope::~error_scope()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/common.h:1081: undefined reference to `PyErr_Restore'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/common.h:1081: undefined reference to `PyErr_Restore'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::str::str(char const*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1542: undefined reference to `PyUnicode_FromString'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1544: undefined reference to `PyErr_Occurred'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::initialize<pybind11::detail::all_type_info_get_cache(_typeobject*)::{lambda(pybind11::handle)#1}, void, pybind11::handle>(pybind11::detail::all_type_info_get_cache(_typeobject*)::{lambda(pybind11::handle)#1}&&, void (*)(pybind11::handle))::{lambda(pybind11::detail::function_call&)#1}::_FUN(pybind11::detail::function_call&)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:472: undefined reference to `_Py_NoneStruct'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::error_scope::error_scope()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/common.h:1078: undefined reference to `PyErr_Fetch'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::error_scope::~error_scope()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/common.h:1081: undefined reference to `PyErr_Restore'
+/usr/bin/ld: contraction_optimizer.o: in function `void std::vector<pybind11::detail::function_call, std::allocator<pybind11::detail::function_call> >::_M_realloc_insert<pybind11::detail::function_call>(__gnu_cxx::__normal_iterator<pybind11::detail::function_call*, std::vector<pybind11::detail::function_call, std::allocator<pybind11::detail::function_call> > >, pybind11::detail::function_call&&)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::local_internals::shared_loader_life_support_data::shared_loader_life_support_data()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:562: undefined reference to `PyThread_tss_alloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/internals.h:562: undefined reference to `PyThread_tss_create'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::loader_life_support::get_stack_top()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/type_caster_base.h:49: undefined reference to `PyThread_tss_get'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::loader_life_support::set_stack_top(pybind11::detail::loader_life_support*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/type_caster_base.h:52: undefined reference to `PyThread_tss_set'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::loader_life_support::~loader_life_support()':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::repr(pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2421: undefined reference to `PyObject_Repr'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::initialize_generic(std::unique_ptr<pybind11::detail::function_record, pybind11::cpp_function::InitializingFunctionRecordDeleter>&&, char const*, std::type_info const* const*, unsigned long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:469: undefined reference to `PyInstanceMethod_Type'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::initialize_generic(std::unique_ptr<pybind11::detail::function_record, pybind11::cpp_function::InitializingFunctionRecordDeleter>&&, char const*, std::type_info const* const*, unsigned long)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:247: undefined reference to `PyCFunction_Type'
+/usr/bin/ld: contraction_optimizer.o: in function `_PyObject_TypeCheck':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:247: undefined reference to `PyType_IsSubtype'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::initialize_generic(std::unique_ptr<pybind11::detail::function_record, pybind11::cpp_function::InitializingFunctionRecordDeleter>&&, char const*, std::type_info const* const*, unsigned long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:495: undefined reference to `_Py_NoneStruct'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::capsule::initialize_with_void_ptr_destructor(void const*, char const*, void (*)(void*))':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2011: undefined reference to `PyCapsule_New'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2029: undefined reference to `PyCapsule_SetContext'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::hasattr(pybind11::handle, char const*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:858: undefined reference to `PyObject_HasAttrString'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:858: undefined reference to `PyObject_HasAttrString'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::initialize_generic(std::unique_ptr<pybind11::detail::function_record, pybind11::cpp_function::InitializingFunctionRecordDeleter>&&, char const*, std::type_info const* const*, unsigned long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:524: undefined reference to `PyCMethod_New'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::capsule::check_(pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1911: undefined reference to `PyCapsule_Type'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::capsule::name() const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1981: undefined reference to `PyCapsule_GetName'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::initialize_generic(std::unique_ptr<pybind11::detail::function_record, pybind11::cpp_function::InitializingFunctionRecordDeleter>&&, char const*, std::type_info const* const*, unsigned long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:620: undefined reference to `PyInstanceMethod_New'
+/usr/bin/ld: contraction_optimizer.o: in function `_PyObject_TypeCheck':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:247: undefined reference to `PyCFunction_Type'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::initialize_generic(std::unique_ptr<pybind11::detail::function_record, pybind11::cpp_function::InitializingFunctionRecordDeleter>&&, char const*, std::type_info const* const*, unsigned long)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::getattr(pybind11::handle, char const*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:882: undefined reference to `PyObject_GetAttrString'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::capsule::name() const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1982: undefined reference to `PyErr_Occurred'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1981: undefined reference to `PyCapsule_GetName'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::function_record* pybind11::capsule::get_pointer<pybind11::detail::function_record>() const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1966: undefined reference to `PyCapsule_GetPointer'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::capsule::set_pointer(void const*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1975: undefined reference to `PyCapsule_SetPointer'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::capsule::name() const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1982: undefined reference to `PyErr_Occurred'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11_meta_dealloc':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:245: undefined reference to `PyType_Type'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::weakref::weakref(pybind11::handle, pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1854: undefined reference to `PyWeakref_NewRef'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1856: undefined reference to `PyErr_Occurred'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1854: undefined reference to `PyWeakref_NewRef'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1856: undefined reference to `PyErr_Occurred'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::traverse_offset_bases(void*, pybind11::detail::type_info const*, pybind11::detail::instance*, bool (*)(void*, pybind11::detail::instance*))':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::clear_instance(_object*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:432: undefined reference to `PyObject_ClearWeakRefs'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:435: undefined reference to `_PyObject_GetDictPtr'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::clear_instance(_object*)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11_object_dealloc':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:454: undefined reference to `PyObject_GC_UnTrack'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11_object_dealloc':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::instance::allocate_layout()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/type_caster_base.h:448: undefined reference to `PyMem_Calloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::weakref::weakref(pybind11::handle, pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1854: undefined reference to `PyWeakref_NewRef'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1856: undefined reference to `PyErr_Occurred'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11_meta_call':
+/home/chris/Code/LQCD/contraction_optimizer/contraction_optimizer.cc:187: undefined reference to `PyType_Type'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11_meta_call':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:198: undefined reference to `PyExc_TypeError'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/class.h:198: undefined reference to `PyErr_Format'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11_meta_call':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::weakref::weakref(pybind11::handle, pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1854: undefined reference to `PyWeakref_NewRef'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1856: undefined reference to `PyErr_Occurred'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1854: undefined reference to `PyWeakref_NewRef'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1856: undefined reference to `PyErr_Occurred'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::dispatcher(_object*, _object*, _object*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:682: undefined reference to `PyCapsule_GetPointer'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:697: undefined reference to `PyExc_TypeError'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:697: undefined reference to `PyErr_SetString'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::dict::size() const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2080: undefined reference to `PyDict_Size'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::dispatcher(_object*, _object*, _object*)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:247: undefined reference to `PyType_IsSubtype'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:472: undefined reference to `_Py_NoneStruct'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::dict_getitemstring(_object*, char const*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:945: undefined reference to `PyUnicode_FromString'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:950: undefined reference to `PyDict_GetItemWithError'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::loader_life_support::get_stack_top()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/type_caster_base.h:49: undefined reference to `PyThread_tss_get'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::loader_life_support::set_stack_top(pybind11::detail::loader_life_support*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/type_caster_base.h:52: undefined reference to `PyThread_tss_set'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::dict_getitemstring(_object*, char const*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:952: undefined reference to `PyErr_Occurred'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::dispatcher(_object*, _object*, _object*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:796: undefined reference to `_Py_NoneStruct'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::dispatcher(_object*, _object*, _object*)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::dict::dict()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2068: undefined reference to `PyDict_New'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::dispatcher(_object*, _object*, _object*)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:472: undefined reference to `_Py_NotImplementedStruct'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::loader_life_support::get_stack_top()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/type_caster_base.h:49: undefined reference to `PyThread_tss_get'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::loader_life_support::set_stack_top(pybind11::detail::loader_life_support*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/type_caster_base.h:52: undefined reference to `PyThread_tss_set'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::dispatcher(_object*, _object*, _object*)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::tuple::tuple<long, 0>(long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2041: undefined reference to `PyTuple_New'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::tuple::tuple<int, 0>(int)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2041: undefined reference to `PyTuple_New'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::dispatcher(_object*, _object*, _object*)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::dispatcher(_object*, _object*, _object*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:851: undefined reference to `PyDict_Copy'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:854: undefined reference to `PyDict_DelItemString'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:861: undefined reference to `_Py_NoneStruct'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::object::object(pybind11::handle, pybind11::object::borrowed_t)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:432: undefined reference to `_Py_NoneStruct'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::dispatcher(_object*, _object*, _object*)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::tuple::size() const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2046: undefined reference to `PyTuple_Size'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::object pybind11::detail::accessor_policies::tuple_item::get<unsigned long, 0>(pybind11::handle, unsigned long const&)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1124: undefined reference to `PyTuple_GetItem'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::repr(pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2421: undefined reference to `PyObject_Repr'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::tuple::size() const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2046: undefined reference to `PyTuple_Size'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::dict::size() const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2080: undefined reference to `PyDict_Size'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::iterator_policies::dict_readonly::increment()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1277: undefined reference to `PyDict_Next'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::tuple::tuple<unsigned long, 0>(unsigned long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2041: undefined reference to `PyTuple_New'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::simple_collector<(pybind11::return_value_policy)1>::call(_object*) const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:1502: undefined reference to `PyObject_CallObject'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::repr(pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2421: undefined reference to `PyObject_Repr'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::iterator_policies::dict_readonly::increment()':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1277: undefined reference to `PyDict_Next'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::dispatcher(_object*, _object*, _object*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:1123: undefined reference to `PyErr_Occurred'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:1125: undefined reference to `PyExc_TypeError'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:1137: undefined reference to `PyErr_Occurred'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:1138: undefined reference to `PyExc_TypeError'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:1128: undefined reference to `PyErr_SetString'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:1141: undefined reference to `PyErr_SetString'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::str::raw_str(_object*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1605: undefined reference to `PyObject_Str'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::tuple::tuple<unsigned long, 0>(unsigned long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2041: undefined reference to `PyTuple_New'
+/usr/bin/ld: contraction_optimizer.o: in function `void pybind11::detail::accessor_policies::tuple_item::set<unsigned long, 0>(pybind11::handle, unsigned long const&, pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1134: undefined reference to `PyTuple_SetItem'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::cpp_function::dispatcher(_object*, _object*, _object*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:1026: undefined reference to `PyExc_SystemError'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:1026: undefined reference to `PyErr_SetString'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::tuple::tuple<unsigned long, 0>(unsigned long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2041: undefined reference to `PyTuple_New'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2041: undefined reference to `PyTuple_New'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2041: undefined reference to `PyTuple_New'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::tuple::size() const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2046: undefined reference to `PyTuple_Size'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::tuple::tuple<unsigned long, 0>(unsigned long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2041: undefined reference to `PyTuple_New'
+/usr/bin/ld: contraction_optimizer.o: in function `void pybind11::detail::accessor_policies::tuple_item::set<unsigned long, 0>(pybind11::handle, unsigned long const&, pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1134: undefined reference to `PyTuple_SetItem'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::tuple::size() const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2046: undefined reference to `PyTuple_Size'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::object pybind11::detail::accessor_policies::tuple_item::get<unsigned long, 0>(pybind11::handle, unsigned long const&)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1124: undefined reference to `PyTuple_GetItem'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::str::raw_str(_object*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1605: undefined reference to `PyObject_Str'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::print(pybind11::tuple const&, pybind11::dict const&)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::str::raw_str(_object*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1605: undefined reference to `PyObject_Str'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::print(pybind11::tuple const&, pybind11::dict const&)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::string_caster<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, false>::decode_utfN(char const*, long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:455: undefined reference to `PyUnicode_DecodeUTF8'
+/usr/bin/ld: contraction_optimizer.o: in function `bool pybind11::dict::contains<char const (&) [4]>(char const (&) [4]) const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2087: undefined reference to `PyDict_Contains'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::str::raw_str(_object*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1605: undefined reference to `PyObject_Str'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::simple_collector<(pybind11::return_value_policy)1>::call(_object*) const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:1502: undefined reference to `PyObject_CallObject'
+/usr/bin/ld: contraction_optimizer.o: in function `bool pybind11::dict::contains<char const (&) [5]>(char const (&) [5]) const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2087: undefined reference to `PyDict_Contains'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::simple_collector<(pybind11::return_value_policy)1>::call(_object*) const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:1502: undefined reference to `PyObject_CallObject'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::string_caster<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, false>::decode_utfN(char const*, long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:455: undefined reference to `PyUnicode_DecodeUTF8'
+/usr/bin/ld: contraction_optimizer.o: in function `bool pybind11::dict::contains<char const (&) [4]>(char const (&) [4]) const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2087: undefined reference to `PyDict_Contains'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::str::raw_str(_object*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1605: undefined reference to `PyObject_Str'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::simple_collector<(pybind11::return_value_policy)1>::call(_object*) const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:1502: undefined reference to `PyObject_CallObject'
+/usr/bin/ld: contraction_optimizer.o: in function `bool pybind11::dict::contains<char const (&) [6]>(char const (&) [6]) const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2087: undefined reference to `PyDict_Contains'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::module_::import(char const*)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/pybind11.h:1212: undefined reference to `PyImport_ImportModule'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::type_caster<bool, void>::load(pybind11::handle, bool)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:320: undefined reference to `_Py_TrueStruct'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:324: undefined reference to `_Py_FalseStruct'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:332: undefined reference to `_Py_NoneStruct'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:353: undefined reference to `PyErr_Clear'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::print(pybind11::tuple const&, pybind11::dict const&)':
+/home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/include/python3.10/object.h:500: undefined reference to `_Py_Dealloc'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::accessor_policies::generic_item::get(pybind11::handle, pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1063: undefined reference to `PyObject_GetItem'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1063: undefined reference to `PyObject_GetItem'
+/usr/bin/ld: /home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1063: undefined reference to `PyObject_GetItem'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::tuple::tuple<int, 0>(int)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2041: undefined reference to `PyTuple_New'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::simple_collector<(pybind11::return_value_policy)1>::call(_object*) const':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:1502: undefined reference to `PyObject_CallObject'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::accessor_policies::generic_item::get(pybind11::handle, pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:1063: undefined reference to `PyObject_GetItem'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::string_caster<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, false>::decode_utfN(char const*, long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:455: undefined reference to `PyUnicode_DecodeUTF8'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::tuple::tuple<unsigned long, 0>(unsigned long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2041: undefined reference to `PyTuple_New'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::string_caster<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, false>::decode_utfN(char const*, long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:455: undefined reference to `PyUnicode_DecodeUTF8'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::tuple::tuple<unsigned long, 0>(unsigned long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2041: undefined reference to `PyTuple_New'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::string_caster<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, false>::decode_utfN(char const*, long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:455: undefined reference to `PyUnicode_DecodeUTF8'
+/usr/bin/ld: contraction_optimizer.o: in function `std::enable_if<((!std::is_floating_point<unsigned int>::value)&&std::is_unsigned<unsigned int>::value)&&((sizeof (unsigned int))<=(sizeof (unsigned long))), pybind11::handle>::type pybind11::detail::type_caster<unsigned int, void>::cast<unsigned int>(unsigned int, pybind11::return_value_policy, pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:223: undefined reference to `PyLong_FromSize_t'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::string_caster<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, false>::decode_utfN(char const*, long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:455: undefined reference to `PyUnicode_DecodeUTF8'
+/usr/bin/ld: contraction_optimizer.o: in function `std::enable_if<((!std::is_floating_point<unsigned int>::value)&&std::is_unsigned<unsigned int>::value)&&((sizeof (unsigned int))<=(sizeof (unsigned long))), pybind11::handle>::type pybind11::detail::type_caster<unsigned int, void>::cast<unsigned int>(unsigned int, pybind11::return_value_policy, pybind11::handle)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:223: undefined reference to `PyLong_FromSize_t'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::detail::string_caster<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, false>::decode_utfN(char const*, long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../cast.h:455: undefined reference to `PyUnicode_DecodeUTF8'
+/usr/bin/ld: contraction_optimizer.o: in function `pybind11::tuple::tuple<unsigned long, 0>(unsigned long)':
+/home/chris/anaconda3/envs/LQCD/lib/python3.10/site-packages/pybind11/include/pybind11/detail/../detail/../pytypes.h:2041: undefined reference to `PyTuple_New'
+collect2: error: ld returned 1 exit status

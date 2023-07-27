@@ -4,7 +4,9 @@
 #include <algorithm>
 #include <iostream>
 //#include <functional>
+#include <pybind11/pybind11.h>
 
+namespace py = pybind11;
 
 using namespace std;
 
@@ -13,24 +15,30 @@ using namespace std;
 
 
   void _printContractionList(const map<iTup, set<iTup>>& cList) {
-    cout<<"contractionList:"<<endl;
+    //cout<<"contractionList:"<<endl;
     for (auto cIt : cList) {
-      cout<<"("<<cIt.first.first<<","<<cIt.first.second<<"): ";
-      for (auto aC : cIt.second)
-	cout << "["<<aC.first<<","<<aC.second<<"] ";
-      cout<<endl;
+      //cout<<"("<<cIt.first.first<<","<<cIt.first.second<<"): ";
+      //for (auto aC : cIt.second)
+	//cout << "["<<aC.first<<","<<aC.second<<"] ";
+      //cout<<endl;
     }
-    cout<<endl;
+    //cout<<endl;
   }
 
+	void ContractionOptimizer::test() {
+		py::print("Contraction optimizer test");
+	}
 
   void ContractionOptimizer::tune() {
+	py::print("Tuning...");
+
     if (ContractionCost::getDilutionRange()==0)
       throw(std::string("Must set dilution range first."));
 
       // determine cost without CSE and 
       // smallest global tensor ID we can use for intermediaries
     unsigned int maxTensId = 0;
+
 
     for (auto dIt : diagList) {
       noCSECost += dIt.getGraph().getRemainingCost();
@@ -39,16 +47,17 @@ using namespace std;
 	    		dIt.getRemainingTensors().end()));
     }
 
+
     unsigned int iDiag = 1, nDiag = diagList.size();
     for (auto dIt = diagList.begin(); dIt != diagList.end(); ++dIt) {
-      cout<<"Diagram "<<iDiag<<"/"<<nDiag<<"\n";
+      py::print("Diagram ",iDiag,"/",nDiag,"\n");
       ++iDiag;
 
       while (!dIt->isDone()) {
 
 	  // obtain list of good next steps
 	unsigned int stepCost;
-	vector<pair<uint, iTup>> stepList;
+	vector<pair<unsigned int, iTup>> stepList;
 	tie(stepCost, stepList) = dIt->singleTermOpt();
 
 	CSECost += stepCost;
