@@ -12,11 +12,12 @@ PYBIND11_MODULE(ContractionOptimizerCPP, m) { //Name conflict with ContractionOp
     py::class_<Graph>(m, "Graph")
         .def(py::init<const std::vector<std::pair<iTup, std::set<iTup>>>&>())
         .def("getContractionList", &Graph::getContractionList);
+        .def("decode", &Graph::decode);
 
     py::class_<ContractionCost>(m, "ContractionCost")
         .def_static("setDilutionRange", &ContractionCost::setDilutionRange)
-        .def_static("getDilutionRange", &ContractionCost::getDilutionRange);
- 
+        .def_static("getDilutionRange", &ContractionCost::getDilutionRange)
+        .def("getCostArray", &ContractionCost::getCostArray);
 
     py::class_<Diagram>(m, "Diagram")
         .def(py::init<const Graph&, const std::vector<unsigned int>&>())
@@ -26,7 +27,9 @@ PYBIND11_MODULE(ContractionOptimizerCPP, m) { //Name conflict with ContractionOp
 
     py::class_<ContractionOptimizer>(m, "ContractionOptimizer")
         .def(py::init<const std::vector<Diagram>&>())
-        .def("tune", &ContractionOptimizer::tune)
-        .def("test", &ContractionOptimizer::test)  
-        .def("getDiagramList", &ContractionOptimizer::getDiagramList);
+        .def("tune", &ContractionOptimizer::tune) 
+        .def("getDiagramList", &ContractionOptimizer::getDiagramList)
+        .def("getCSECost", &ContractionOptimizer::getCSECost)
+        .def("getNoCSECost", &ContractionOptimizer::getNoCSECost)
+        .def("getCompStepList", &ContractionOptimizer::getCompStepList);
 }

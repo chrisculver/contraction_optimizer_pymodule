@@ -5,7 +5,6 @@ LOGFILE="log_build.txt"
 rm ${LOGFILE}
 rm ContractionOptimizerCPP.cpython-*
 rm *.o
-rm a.out
 
 g++ -c -g -DNDEBUG -O3 -Wall -std=c++17 -fPIC diagram.cc -o diagram.o >> ${LOGFILE} 2>&1
 g++ -c -g -DNDEBUG -O3 -Wall -std=c++17 -fPIC $(python3 -m pybind11 --includes) contraction_optimizer.cc -o contraction_optimizer.o >> ${LOGFILE} 2>&1

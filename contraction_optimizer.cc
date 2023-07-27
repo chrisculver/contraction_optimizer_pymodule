@@ -25,81 +25,82 @@ using namespace std;
     //cout<<endl;
   }
 
-	void ContractionOptimizer::test() {
-		py::print("Contraction optimizer test");
+	
+	void ContractionOptimizer::tune() {
+
+    	if (ContractionCost::getDilutionRange()==0)
+      		throw(std::string("Must set dilution range first."));
+
+		// determine cost without CSE and 
+		// smallest global tensor ID we can use for intermediaries
+    	unsigned int maxTensId = 0;
+		for (auto dIt : diagList) {
+			noCSECost += dIt.getGraph().getRemainingCost();
+			maxTensId = max(maxTensId, *std::max_element(
+											dIt.getRemainingTensors().begin(),
+											dIt.getRemainingTensors().end())
+							);
+		}
+
+		unsigned int iDiag = 1, nDiag = diagList.size();
+		for (auto dIt = diagList.begin(); dIt != diagList.end(); ++dIt) 
+		{
+			py::print("Diagram ",iDiag,"/",nDiag);
+			++iDiag;
+
+			while (!dIt->isDone()) 
+			{
+				// obtain list of good next steps
+				unsigned int stepCost;
+				vector<pair<unsigned int, iTup>> stepList;
+				tie(stepCost, stepList) = dIt->singleTermOpt();
+
+				CSECost += stepCost;
+
+				// reserve ID for new intermediary
+				maxTensId++;
+
+				compStep_t globOptStep;
+				ContractionCost globOptProfit;
+				vector<Diagram*> replList;
+
+				// even if there's only one suggested next step, go through all
+				// diagrams here, and keep track of the diagrams that will need
+				// a replacement in the next step
+				for (auto sIt : stepList) 
+				{
+					ContractionCost globProfit;
+					vector<Diagram*> tmpReplList;
+
+					for (auto ddIt = dIt; ddIt != diagList.end(); ++ddIt) 
+					{
+						if (ddIt->isDone()) continue;
+						// if the step is a subexpression, track the diagram
+						if(ddIt->getProfit(sIt.first, sIt.second, globProfit))
+						tmpReplList.push_back(&(*ddIt));
+					}
+
+					if (globOptProfit < globProfit) 
+					{
+						globOptProfit = globProfit;
+						globOptStep = make_tuple(sIt.first, sIt.second, maxTensId);
+						replList = tmpReplList;
+					}
+				}
+
+				// store compStep
+				compStepList.push_back(globOptStep);
+
+				// replace the subexpression everywhere
+				for (auto ddIt = replList.begin(); ddIt != replList.end(); ++ddIt) 
+				{
+					if ((*ddIt)->isDone()) 
+						continue;
+
+					(*ddIt)->replaceSubexpression(std::get<0>(globOptStep),
+									std::get<1>(globOptStep),
+									std::get<2>(globOptStep));
+				}
+			} // diagram done
+    	} // diagram list done
 	}
-
-  void ContractionOptimizer::tune() {
-	py::print("Tuning...");
-
-    if (ContractionCost::getDilutionRange()==0)
-      throw(std::string("Must set dilution range first."));
-
-      // determine cost without CSE and 
-      // smallest global tensor ID we can use for intermediaries
-    unsigned int maxTensId = 0;
-
-
-    for (auto dIt : diagList) {
-      noCSECost += dIt.getGraph().getRemainingCost();
-      maxTensId = max(maxTensId, *std::max_element(
-	    		dIt.getRemainingTensors().begin(),
-	    		dIt.getRemainingTensors().end()));
-    }
-
-
-    unsigned int iDiag = 1, nDiag = diagList.size();
-    for (auto dIt = diagList.begin(); dIt != diagList.end(); ++dIt) {
-      py::print("Diagram ",iDiag,"/",nDiag,"\n");
-      ++iDiag;
-
-      while (!dIt->isDone()) {
-
-	  // obtain list of good next steps
-	unsigned int stepCost;
-	vector<pair<unsigned int, iTup>> stepList;
-	tie(stepCost, stepList) = dIt->singleTermOpt();
-
-	CSECost += stepCost;
-
-	  // reserve ID for new intermediary
-	maxTensId++;
-
-	compStep_t globOptStep;
-	ContractionCost globOptProfit;
-	vector<Diagram*> replList;
-
-	  // even if there's only one suggested next step, go through all
-	  // diagrams here, and keep track of the diagrams that will need
-	  // a replacement in the next step
-	for (auto sIt : stepList) {
-	  ContractionCost globProfit;
-	  vector<Diagram*> tmpReplList;
-
-	  for (auto ddIt = dIt; ddIt != diagList.end(); ++ddIt) {
-	    if (ddIt->isDone()) continue;
-	      // if the step is a subexpression, track the diagram
-	    if(ddIt->getProfit(sIt.first, sIt.second, globProfit))
-	      tmpReplList.push_back(&(*ddIt));
-	  }
-
-	  if (globOptProfit < globProfit) {
-	    globOptProfit = globProfit;
-	    globOptStep = make_tuple(sIt.first, sIt.second, maxTensId);
-	    replList = tmpReplList;
-	  }
-	}
-
-	  // store compStep
-	compStepList.push_back(globOptStep);
-
-	  // replace the subexpression everywhere
-	for (auto ddIt = replList.begin(); ddIt != replList.end(); ++ddIt) {
-	  if ((*ddIt)->isDone()) continue;
-	  (*ddIt)->replaceSubexpression(std::get<0>(globOptStep),
-				     std::get<1>(globOptStep),
-				     std::get<2>(globOptStep));
-	}
-      } // diagram done
-    } // diagram list done
-  }

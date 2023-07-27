@@ -68,6 +68,8 @@ class Graph
 
     static std::set<iTup> decodeElement(unsigned int aC);
 
+    std::map<iTup, std::set<iTup>> decode_tst();
+
   private:
     unsigned int canonicalize(unsigned int aC) const;
     unsigned int reverse(unsigned int aC) const;

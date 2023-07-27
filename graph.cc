@@ -149,7 +149,7 @@ using namespace std;
 
       unsigned int aCode = 0;
       for (auto cIt : mIt.second) {
-	aCode |= ((cIt.second+1) & 0x7) << (8 + cIt.first*3);
+	      aCode |= ((cIt.second+1) & 0x7) << (8 + cIt.first*3);
       }
       aCode |= (mIt.first.first & 0xf) << 4;
       aCode |= mIt.first.second & 0xf;
@@ -198,6 +198,21 @@ using namespace std;
     }
   }
 
+  map<iTup, std::set<iTup>> Graph::decode_tst() {
+    map<iTup, std::set<iTup>> contrList;
+
+    for (auto mIt : icode) {
+      unsigned int tens2 = mIt & 0xf;
+      unsigned int tens1 = (mIt >> 4) & 0xf;
+
+      std::set<iTup> contrIndSet = decodeElement(mIt);
+
+      contrList.emplace(std::make_pair(tens1, tens2), contrIndSet);
+    }
+
+    return contrList;
+  }
+
 
   unsigned int Graph::isSubexpression(
 		  const unsigned int aStep,
@@ -220,31 +235,30 @@ using namespace std;
 
     for (auto mIt : icode) {
       size_t tensId1 = (mIt >> 4) & 0xfu, tensId2 = mIt & 0xfu;
-	// find the reduction that removes as many indices as possible
+      // find the reduction that removes as many indices as possible
       unsigned int reduction = decodeElement(mIt).size();
 
       if (reduction >= bestReduction) {
-	  // break ties using cost
-	std::vector<unsigned int> tensSizeList = getAllNumInds();
-	unsigned int cost = tensSizeList[tensId1] + tensSizeList[tensId2] - reduction;
+      // break ties using cost
+        std::vector<unsigned int> tensSizeList = getAllNumInds();
+        unsigned int cost = tensSizeList[tensId1] + tensSizeList[tensId2] - reduction;
 
-	if (reduction == bestReduction && cost < bestCost) {
-	  retList.clear();
-	  bestCost = cost;
-	  retList.push_back(mIt);
-	}
-	else if (reduction > bestReduction) {
-	  retList.clear();
-	  bestReduction = reduction;
-	  bestCost = cost;
-	  retList.push_back(mIt);
-	}
-	else if (cost == bestCost) {
-	  retList.push_back(mIt);
-	}
+        if (reduction == bestReduction && cost < bestCost) {
+          retList.clear();
+          bestCost = cost;
+          retList.push_back(mIt);
+        }
+        else if (reduction > bestReduction) {
+          retList.clear();
+          bestReduction = reduction;
+          bestCost = cost;
+          retList.push_back(mIt);
+        }
+        else if (cost == bestCost) {
+          retList.push_back(mIt);
+        }
       }
-    }
-
+    }// end for mIt
     return std::make_pair(bestCost, retList);
   }
 
