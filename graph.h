@@ -68,7 +68,7 @@ class Graph
 
     static std::set<iTup> decodeElement(unsigned int aC);
 
-    std::map<iTup, std::set<iTup>> decode_tst();
+    std::map<iTup, std::set<iTup>> decode_test();
 
   private:
     unsigned int canonicalize(unsigned int aC) const;

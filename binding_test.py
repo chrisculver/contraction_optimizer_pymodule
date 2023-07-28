@@ -25,6 +25,7 @@ optimizer = CO.ContractionOptimizer([d1,d2])
 for diag in optimizer.getDiagramList():
     print(diag.getGraph().getContractionList())
 
-optimizer.test()
-
 optimizer.tune()
+
+print("No CSE cost = ", optimizer.getNoCSECost().getCostArray())
+print("W/ CSE cost = ",optimizer.getCSECost().getCostArray())

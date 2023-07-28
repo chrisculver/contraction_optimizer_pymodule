@@ -11,8 +11,8 @@ namespace py = pybind11;
 PYBIND11_MODULE(ContractionOptimizerCPP, m) { //Name conflict with ContractionOptimizer class
     py::class_<Graph>(m, "Graph")
         .def(py::init<const std::vector<std::pair<iTup, std::set<iTup>>>&>())
-        .def("getContractionList", &Graph::getContractionList);
-        .def("decode", &Graph::decode);
+        .def("getContractionList", &Graph::getContractionList)
+        .def("decodeElement", &Graph::decodeElement);
 
     py::class_<ContractionCost>(m, "ContractionCost")
         .def_static("setDilutionRange", &ContractionCost::setDilutionRange)

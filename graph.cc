@@ -198,7 +198,7 @@ using namespace std;
     }
   }
 
-  map<iTup, std::set<iTup>> Graph::decode_tst() {
+  map<iTup, std::set<iTup>> Graph::decode_test() {
     map<iTup, std::set<iTup>> contrList;
 
     for (auto mIt : icode) {
