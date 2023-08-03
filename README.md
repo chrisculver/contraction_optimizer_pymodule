@@ -1,4 +1,8 @@
 # Contraction Optimizer
+
+This fork adds python bindings for contraction optimizer.  The `build.sh` file only builds the python bindings and not the C++ executable, if you are not interested in using this code in python, head to [contraction optimizer](https://github.com/laphnn/contraction_optimizer)
+
+
 Code to perform operation count minimization for the evaluation of a large number of tensor contractions. A possible application is the efficient evaluation of correlation functions in lattice QCD calculations, and lattice-QCD terminology is used in the following.
 
 ## Installation
