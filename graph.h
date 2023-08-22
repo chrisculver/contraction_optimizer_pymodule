@@ -15,7 +15,7 @@ class ContractionCost {
     static unsigned int nDil;
 
   public:
-    ContractionCost() : store(5,0) {}
+    ContractionCost() : store(8,0) {}
 
     ContractionCost& operator+=(const ContractionCost& rhs);
     ContractionCost& operator-=(const ContractionCost& rhs);

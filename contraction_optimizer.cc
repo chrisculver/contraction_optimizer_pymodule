@@ -45,7 +45,7 @@ using namespace std;
 		unsigned int iDiag = 1, nDiag = diagList.size();
 		for (auto dIt = diagList.begin(); dIt != diagList.end(); ++dIt) 
 		{
-			py::print("Diagram ",iDiag,"/",nDiag);
+			//py::print("Diagram ",iDiag,"/",nDiag);
 			++iDiag;
 
 			while (!dIt->isDone()) 
